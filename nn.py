@@ -2,6 +2,7 @@ import tensorflow as tf
 from tensorflow import keras
 mnist = tf.keras.datasets.mnist
 
+
 class myCallback(tf.keras.callbacks.Callback):
   def on_epoch_end(self, epoch, logs={}):
     if (logs.get('acc') > 0.99):
